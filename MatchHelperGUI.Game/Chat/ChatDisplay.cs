@@ -21,7 +21,13 @@ public partial class ChatDisplay : CompositeDrawable
             {
                 new BasicScrollContainer
                 {
+                    Anchor = Anchor.TopLeft,
+                    Origin = Anchor.TopLeft,
                     RelativeSizeAxes = Axes.Both,
+                    Padding = new MarginPadding
+                    {
+                        Bottom = 50
+                    },
                     Children = new Drawable[]
                     {
                         new Box
@@ -39,10 +45,10 @@ public partial class ChatDisplay : CompositeDrawable
                 },
                 new BasicTextBox
                 {
-                    Anchor = Anchor.BottomCentre,
-                    Origin = Anchor.BottomCentre,
-                    RelativeSizeAxes = Axes.Both,
-                    Size = new Vector2(1, 0.1f)
+                    Anchor = Anchor.BottomLeft,
+                    Origin = Anchor.BottomLeft,
+                    RelativeSizeAxes = Axes.X,
+                    Height = 50
                 }
             }
         };
